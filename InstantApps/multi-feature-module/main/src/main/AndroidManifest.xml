@@ -27,7 +27,9 @@
         <activity
             android:name="com.example.android.unsplash.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/App.Home">
+            android:theme="@style/App.Home"
+            android:exported="true"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

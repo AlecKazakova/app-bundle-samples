@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.dynamic-feature'
+plugins {
+    alias(libs.plugins.android.dynamic.feature)
+}
 
 android {
-    compileSdkVersion rootProject.compileSdk
+    compileSdk libs.versions.compileSdk.get() as int
+    namespace "com.example.android.unsplash.feature.main"
 
     defaultConfig {
-        minSdkVersion rootProject.minSdk
-        targetSdkVersion rootProject.targetSdk
-        versionCode rootProject.versionCode
-        versionName rootProject.versionName
+        minSdk 21
+        targetSdk libs.versions.compileSdk.get() as int
+
+        versionCode 1
+        versionName '1.0'
     }
 
     buildTypes {
